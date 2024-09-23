@@ -37,8 +37,6 @@ def contact(request):
         )
         contact.save()
         
-        
-        
         # Send Mail
         send_mail(
             'Property Listing Inquiry',
@@ -47,8 +45,6 @@ def contact(request):
             [realtor_email, 'infoirfan.personal@gmail.com'],
             fail_silently=False
         )
-        
-        
         
         messages.success(request, "Your Request Has Been Submitted, A Realtor Will Get Back To You Soon!")
         return redirect('/listings/' + listing_id)
