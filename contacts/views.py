@@ -46,5 +46,7 @@ def contact(request):
             fail_silently=False
         )
         
+        
+        # Success mesg
         messages.success(request, "Your Request Has Been Submitted, A Realtor Will Get Back To You Soon!")
         return redirect('/listings/' + listing_id)
